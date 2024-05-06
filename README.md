@@ -1,2 +1,2 @@
 # 100-days-of-nodejs
-a progressive learning journey towards nodeJS
+a progressive learning journey towards nodeJS 🚀
