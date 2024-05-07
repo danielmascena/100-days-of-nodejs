@@ -1,0 +1,7 @@
+
+import { setTimeout as sleep } from 'timers/promises';
+
+async function * myAsyncIterator() {
+    await sleep(1000);
+    yield 1;
+}

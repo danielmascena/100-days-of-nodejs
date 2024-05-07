@@ -1,0 +1,19 @@
+{
+  "name": "100-days-of-nodejs",
+  "version": "1.0.0",
+  "description": "a progressive learning journey towards nodeJS 🚀",
+  "main": "day001.js",
+  "type": "module",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielmascena/100-days-of-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielmascena/100-days-of-nodejs/issues"
+  },
+  "homepage": "https://github.com/danielmascena/100-days-of-nodejs#readme"
+}
