@@ -77,7 +77,7 @@ The main reference to this activity was the official (documentation) [https://no
 
 ## Day 001:
 
-Create a basic web server to server an index html file
+Create a basic web server to server an index html file.
 
 ```js
 
@@ -93,4 +93,18 @@ createServer((req, res) => {
   res.end();
 }).listen(8000);
 
+```
+
+## Day 002:
+
+Create a custom event emitter.
+
+```js
+import { EventEmitter } from "node:events";
+
+const myEvent = new EventEmitter();
+
+myEvent.on("lunchtime", (food) => console.log(`Time to eat ${food}`));
+
+myEvent.emit("lunchtime", "🍱🍣");
 ```
