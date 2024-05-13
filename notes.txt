@@ -1,5 +1,7 @@
 
-import { setTimeout as sleep } from 'timers/promises';
+import { setTimeout as sleep } from 'node:timers/promises';
+
+import { stdout, stdin } from 'node:process';
 
 async function * myAsyncIterator() {
     await sleep(1000);

@@ -109,7 +109,7 @@ myEvent.on("lunchtime", (food) => console.log(`Time to eat ${food}`));
 myEvent.emit("lunchtime", "🍱🍣");
 ```
 
-## Day 003: Count the number of files in the current directory using the child process module with `spawn`
+## Day 003: Count the number of files with `spawn`
 
 ```js
 import { spawn } from 'node:child_process';
@@ -119,6 +119,29 @@ const wc = spawn('wc', ['-l']);
 find.stdout.pipe(wc.stdin);
 
 wc.stdout.on("data", (data) => console.log(`The number of files: ${data}`));
-wc.on("exit", (code, signal) => console.log(`Child process exited: ${code} - ${signal});
+wc.on("exit", (code, signal) => console.log(`Child process exited: ${code} - ${signal}`);
 
+```
+
+## Day 004: write and read using the File System module
+
+```js
+import { promises, createWriteStream } from "node:fs";
+import { setTimeout as sleep } from "node:timers/promises";
+
+const { open } = promises;
+
+// create n write into a file
+const file = createWriteStream("tmp.txt");
+file.write("hello");
+file.write("\n");
+file.write("world");
+file.end();
+
+await sleep(2000);
+
+// read n output the content
+const fileFromDisk = await open("tmp.txt");
+
+for await (const line of fileFromDisk.readLines()) console.log(line);
 ```
